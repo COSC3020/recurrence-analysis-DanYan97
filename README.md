@@ -40,3 +40,9 @@ Using substitution method to solve this relation:
 4. To make $\frac{n}{3^i}=1$, $i=log_3n$, So that $T(n)=3^{\log_3n}T(1)+ \sum_{k=0}^{i-1} 3^k n^3=nT(1)+\sum_{k=0}^{i-1} 3^k n^3$
 
 Therefore, $T(n)=nT(1)+\sum_{k=0}^{i-1} 3^k n^3\in\Theta(n^3)$
+
+“I certify that I have listed all sources used to complete this exercise,
+ including the use of any Large Language Models. 
+ All of the work is my own, except where stated otherwise. 
+ I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, 
+ charges may be filed against me without prior notice.” --Doris Yan
