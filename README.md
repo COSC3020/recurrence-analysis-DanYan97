@@ -30,3 +30,13 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+The recurrence relation can be expressed as $T(n)=3T(\frac{n}{3})+n^3$, whereas $3T(\frac{n}{3})$ stands for the 3 recursive call, and $n^3$ stands for the three nested loops.
+
+Using substitution method to solve this relation:
+1. Substituing into the original equation: $T(n)=3[3T(\frac{n}{9})+n^3]+n^3=9T(\frac{n}{9})+4n^3$
+2. Do substitution again: $T(n)=9T(\frac{n}{9})+4n^3=3[9T(\frac{n}{27})+4n^3]+n^3=27T(\frac{n}{27})+13n^3$
+3. Find the pattern: $T(n)=3^iT(\frac{n}{3^i})+ \sum_{k=0}^{i-1} 3^k n^3$
+4. To make $\frac{n}{3^i}=1$, $i=log_3n$, So that $T(n)=3^{\log_3n}T(1)+ \sum_{k=0}^{i-1} 3^k n^3=nT(1)+\sum_{k=0}^{i-1} 3^k n^3$
+
+Therefore, $T(n)=nT(1)+\sum_{k=0}^{i-1} 3^k n^3\in\Theta(n^3)$
