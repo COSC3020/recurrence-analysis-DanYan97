@@ -39,7 +39,7 @@ Using substitution method to solve this relation:
 3. Find the pattern: $T(n)=3^iT(\frac{n}{3^i})+ in^5$
 4. To make $\frac{n}{3^i}=1$, $i=log_3n$, So that $T(n)=3^{\log_3n}T(1)+ log_3nn^5=nT(1)+log_3nn^5$
 
-Therefore, $T(n)=nT(1)+ log_3nn^5\in\Theta(n^5)$
+Therefore, $T(n)=nT(1)+ log_3nn^5\in\Theta(n^5log_3n)$
 
 “I certify that I have listed all sources used to complete this exercise,
  including the use of any Large Language Models. 
